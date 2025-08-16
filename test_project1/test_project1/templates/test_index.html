@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>djangoテストページ</title>
+    
+    <!-- staticタグを読み込む -->
+    {% load static %}
+
+    <!-- CSSファイルのリンク -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main_style.css' %}">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <h1>djangoテストページ</h1>
+    </header>
+
+    <!-- コンテンツ -->
+    <div class="content">
+        <h2>当ページはPython Djangoのテストページです。</h2>
+        <p>こちらは、Djangoフレームワークを使ったテストページです。ここでは、Djangoを利用したWeb開発の実験が行われています。</p>
+        <a href="{% url 'login' %}" class="button">ログインページへ</a>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2025 Django Test Page</p>
+    </footer>
+
+</body>
+</html>
